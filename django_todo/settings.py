@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+<<<<<<< HEAD
+=======
+import dj_database_url
+>>>>>>> 7bcef21 (Prepare to deploy to Heroku.)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,6 +78,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+<<<<<<< HEAD
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -82,6 +87,19 @@ DATABASES = {
 }
 
 
+=======
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://xvyyqygwdfgekw:a2af7960eea84937a8eef00adc3d2aa206a415300694a038ce8c8f061dafee9e@ec2-176-34-222-188.eu-west-1.compute.amazonaws.com:5432/dfffepolcv8rek')
+}
+
+>>>>>>> 7bcef21 (Prepare to deploy to Heroku.)
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
